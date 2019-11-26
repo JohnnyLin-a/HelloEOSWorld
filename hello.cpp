@@ -5,7 +5,7 @@ using namespace eosio;
 
 class hello : public contract {
    public:
-      using contrac::contract;
+      using contract::contract;
 
       [[eosio::action]]
       void hi( name user ) {
