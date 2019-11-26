@@ -9,6 +9,8 @@ class hello : public contract {
 
       [[eosio::action]]
       void hi( name user ) {
-         print( "hello, ", name{user});
+         print( "hello, ", user);
       }
 };
+
+EOSIO_DISPATCH( hello, (hi))
