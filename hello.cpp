@@ -3,4 +3,12 @@
 
 using namespace eosio;
 
-class hello : public contract {};
+class hello : public contract {
+   public:
+      using contrac::contract;
+
+      [[eosio::action]]
+      void hi( name user ) {
+         print( "hello, ", name{user});
+      }
+};
